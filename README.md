@@ -1,153 +1,69 @@
 # Task Innovative Skills
 
-A collection of Python learning tasks demonstrating conditional statements and scientific computations.
+A collection of Python learning tasks demonstrating conditional statements, list operations, and scientific computations. This repository contains small command-line scripts intended for practice and demonstration.
 
 ## Project Overview
 
-This project contains two main applications:
+Contains three scripts:
 
-1. **Scientific Calculator (CLI)** - A comprehensive mathematical calculator
-2. **Conditional Statement Task** - A student grade and CGPA calculation system
+- `calculator.py` — A command-line scientific calculator with basic, trigonometric, logarithmic, rounding, and constant operations.
+- `conditional_Statement_task.py` — Fixed-credit grade point and CGPA calculator (department-specific course lists).
+- `List_task.py` — Simple list-processing exercises: cleaning, calibration, and filtering example.
 
-## Features
+## Files & Quick Usage
 
-The calculator is organized into 7 main categories:
+- **calculator.py**
 
-### 1. **Basic Arithmetic**
+  - Run: `python calculator.py`
+  - Interactive menu with categories: Basic, Roots, Trig, Log/Exp, Rounding, Constants, Factorial.
 
-- Addition (+)
-- Subtraction (-)
-- Multiplication (\*)
-- Division (/)
-- Modulus (%)
-- Power/Exponentiation (\*\*)
+- **conditional_Statement_task.py**
 
-Example: `10 + 5 * 2`
+  - Run: `python conditional_Statement_task.py`
+  - Enter a department (CSE, EEE, Civil, BBA, English) and marks for each subject to compute CGPA.
 
-### 2. **Roots & Absolute Value**
+- **List_task.py**
+  - Run: `python List_task.py`
+  - Demonstrates: replacing error markers, applying an in-place multiplier (calibration), and filtering low-quality readings.
 
-- Square Root (√)
-- Cube Root (∛)
-- Absolute Value (|x|)
+---
 
-### 3. **Trigonometry**
+**Scientific Calculator — Highlights**
 
-- sin, cos, tan
-- asin, acos, atan
-- Support for both Degrees and Radians input
+- Basic arithmetic: `+`, `-`, `*`, `/`, `%`, `**` (power)
+- Roots & absolute: square root, cube root, absolute value
+- Trigonometry: `sin`, `cos`, `tan`, `asin`, `acos`, `atan` (supports degrees or radians)
+- Log & exp: `log10`, `ln`, `e^x`, `10^x`
+- Rounding & number ops: `round`, `floor`, `ceil`, `gcd`, `lcm`
+- Constants: `pi`, `e`
+- Factorial
 
-### 4. **Logarithmic & Exponential**
-
-- log10 (Base 10 Logarithm)
-- ln (Natural Logarithm)
-- e^x (Exponential)
-- 10^x (Power of 10)
-
-### 5. **Rounding & Number Operations**
-
-- round
-- floor
-- ceil
-- GCD (Greatest Common Divisor)
-- LCM (Least Common Multiple)
-
-### 6. **Mathematical Constants**
-
-- π (PI)
-- e (Euler's Number)
-
-### 7. **Factorial**
-
-- n! (Factorial of n)
-
-## How to Use
-
-1. Run the script:
-
-   ```bash
-   python calculator.py
-   ```
-
-2. The calculator will display a menu with 7 categories (0-7)
-
-3. Select a category number to access different operations
-
-4. Follow the prompts to enter your values
-
-5. Enter `0` to exit the calculator
-
-## Requirements
-
-- Python 3.6+
-- No external dependencies (uses built-in `math` module)
-
-## Example Usage
+**Calculator Example**
 
 ```
 Select a category (0-7): 1
 Enter basic expression (e.g. 10 + 5 * 2): 25 + 10
 Result: 35
-
-Select a category (0-7): 3
-Choose (sin, cos, tan, asin, acos, atan): sin
-Enter value: 90
-Is input in (D)egrees or (R)adians? D
-Result: 1.0
-
-Select a category (0-7): 0
-Closing Calculator. Goodbye!
 ```
 
-## Error Handling
+**Notes**
 
-- The calculator handles **Division by Zero** errors
-- Invalid choice selections are detected and user is prompted to select 0-7
-- Type checking for appropriate input values
-
-## Notes
-
-- For trigonometric functions, you can specify if input is in Degrees or Radians
-- GCD and LCM operations require integer inputs
-- The calculator uses Python's `eval()` function for basic arithmetic expressions, allowing flexible input formats
+- Uses Python's `math` module; no external dependencies.
+- Basic expressions use `eval()` — avoid executing untrusted input.
 
 ---
 
-# Conditional Statement Task: Grade & CGPA Calculator
+**Conditional Statement Task — Highlights**
 
-A student grading system that calculates grade points and CGPA (Cumulative Grade Point Average) based on department-specific course structures.
+Supported departments and example course credits:
 
-## Features
+- CSE: Intro to Programming (3.0), Discrete Math (3.0), Programming Lab (1.5)
+- EEE: Circuits I (3.0), Basic Electronics (3.0)
+- Civil: Engineering Mechanics (4.0), Engineering Drawing (2.0)
+- BBA: Intro to Accounting (3.0), Principles of Management (3.0)
+- English: Intro to Literature (3.0), Phonetics (3.0)
 
-### Supported Departments
-
-1. **CSE (Computer Science & Engineering)**
-
-   - Intro to Programming (3.0 Credits)
-   - Discrete Math (3.0 Credits)
-   - Programming Lab (1.5 Credits)
-
-2. **EEE (Electrical & Electronics Engineering)**
-
-   - Circuits I (3.0 Credits)
-   - Basic Electronics (3.0 Credits)
-
-3. **Civil Engineering**
-
-   - Engineering Mechanics (4.0 Credits)
-   - Engineering Drawing (2.0 Credits)
-
-4. **BBA (Business Administration)**
-
-   - Intro to Accounting (3.0 Credits)
-   - Principles of Management (3.0 Credits)
-
-5. **English**
-   - Intro to Literature (3.0 Credits)
-   - Phonetics (3.0 Credits)
-
-### Grading Scale
-
-The system uses a GPA scale based on total marks:
+Grading scale (total marks → grade point):
 
 | Total Marks | Grade Point |
 | ----------- | ----------- |
@@ -162,52 +78,58 @@ The system uses a GPA scale based on total marks:
 | 40-44       | 2.00        |
 | Below 40    | 0.00        |
 
-## How to Use
+Operation: for each subject enter Class Test (0-30), Mid Term (0-30), Final Term (0-40). The script computes grade points, weighted points, and final CGPA.
 
-1. Run the script:
-
-   ```bash
-   python conditional_Statement_task.py
-   ```
-
-2. Select a department from the available options (CSE, EEE, Civil, BBA, English)
-
-3. For each subject, enter marks for:
-
-   - Class Test (0-30)
-   - Mid Term (0-30)
-   - Final Term (0-40)
-
-4. The system automatically calculates:
-   - Individual subject grade points
-   - Weighted grade points (GPA × Credits)
-   - Final CGPA (weighted points ÷ total credits)
-
-## Example Usage
+**Conditional Example**
 
 ```
---- Fixed Credit Grading System ---
-Available Departments: CSE, EEE, Civil, BBA, English
 Enter Department Name: CSE
-
---- Department: CSE (Fixed Credits) ---
 Subject: Intro to Programming (3.0 Credits)
 Enter Class Test (0-30): 25
 Enter Mid Term (0-30): 28
 Enter Final Term (0-40): 35
 ...
-------------------------------
 Calculated CGPA for CSE: 3.65
 ```
 
-## How It Works
+---
 
-- **Conditional Logic**: Uses if-elif-else statements to determine grade points based on total marks
-- **Weighted Calculation**: Multiplies each subject's grade point by its credit hours
-- **CGPA Calculation**: Divides total weighted points by total credits to get final CGPA
-- **Department-Specific Structure**: Each department has different course configurations and credit hours
+**List Task — Highlights**
+
+`List_task.py` demonstrates basic list processing:
+
+- Cleaning: find and replace error markers (e.g., replace "Error" with `0.0`).
+- Calibration: modify values in-place (e.g., apply a 10% multiplier).
+- Filtering: extract values below a quality threshold into a separate list.
+
+Example behavior:
+
+```
+Original List: [12.5, 'Error', 18.2, 15.0, 'Error', 22.1, 10.8]
+After Cleaning: [12.5, 0.0, 18.2, 15.0, 0.0, 22.1, 10.8]
+After Calibration (+10%): [13.75, 0.0, 20.02, 16.5, 0.0, 24.31, 11.88]
+Low Quality Log: [13.75, 0.0, 16.5, 0.0, 11.88]
+```
+
+---
 
 ## Requirements
 
 - Python 3.6+
-- No external dependencies
+- No external packages required (uses built-in `math` module)
+
+## Running the examples
+
+Run any script from the project root with `python`.
+
+Windows (cmd.exe) example:
+
+```cmd
+python calculator.py
+python conditional_Statement_task.py
+python List_task.py
+```
+
+## Contribution
+
+Feel free to open issues or modify the scripts to add features or improve input validation. These scripts are designed for learning and can be extended.
