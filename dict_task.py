@@ -11,41 +11,41 @@ The Task: 1. Create a dictionary login_counts with 3 existing users.
 login_counts = {"admin": 5, "dev_user": 12, "guest_1": 1}
 """
 # task1
-# login_counts = {"admin": 5, "dev_user": 12, "guest_1": 1}
-# for x in login_counts:
-#     print(type(x),x)
-# value = login_counts.get('admin')
-# value+=1
-# print(value)
-# print(login_counts)
+login_counts = {"admin": 5, "dev_user": 12, "guest_1": 1}
+for x in login_counts:
+    print(type(x),x)
+value = login_counts.get('admin')
+value+=1
+print(value)
+print(login_counts)
 
-# task2
-# def record_login(user_d, user_name):
-#     flag=1
-#     for x in user_d:
-#         if x == user_name:
-#             v = user_d.get(x)
-#             v+=1
-#             user_d[x]=v
-#             flag=0
-#     if flag:
-#         user_d.setdefault(user_name,1)
+task2
+def record_login(user_d, user_name):
+    flag=1
+    for x in user_d:
+        if x == user_name:
+            v = user_d.get(x)
+            v+=1
+            user_d[x]=v
+            flag=0
+    if flag:
+        user_d.setdefault(user_name,1)
             
-#     return user_d
+    return user_d
 
 
-# user=input("Enter your user_name: ")
-# new_log = record_login(login_counts,user)
-# print(f'new updated login_counts: {new_log} and user name: {user}')
+user=input("Enter your user_name: ")
+new_log = record_login(login_counts,user)
+print(f'new updated login_counts: {new_log} and user name: {user}')
 
-# # task 3
-# def batch_user(arr,x):
-#     arr.update(x)
-#     return arr
-# batch = {'pankaj':5,'joy':3,'arya':7}
+# task 3
+def batch_user(arr,x):
+    arr.update(x)
+    return arr
+batch = {'pankaj':5,'joy':3,'arya':7}
 
-# new_log = batch_user(login_counts,batch)
-# print(f'new updated login_counts: {new_log} and batch users: {batch}')
+new_log = batch_user(login_counts,batch)
+print(f'new updated login_counts: {new_log} and batch users: {batch}')
 
 
 """
@@ -76,4 +76,5 @@ for x in range(len(arr)-1,-1,-1):
 
 print(f'Remove expensive items: {expensive_items}')    
 print(f'Update menu list: {dict(arr)}')
+
 
